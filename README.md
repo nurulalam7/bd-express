@@ -27,6 +27,7 @@ https://github.com/programming-hero-web-course1/tourism-or-delivery-website-clie
 
 
 firebase link:
+https://delivery-website-assignment.web.app/
 
 
 
@@ -36,3 +37,8 @@ about project :
 3.anyone can take this service very easlily
 4.this is user friendly website 
 5.all kind of delivery issue handle by using this application
+
+delveloper informtion :
+name :nurul alam parves 
+webdeveloper 
+add:muradpur ,chattagram ,bangladesh
