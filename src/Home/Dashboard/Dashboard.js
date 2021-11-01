@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React from 'react'
 import { useForm } from "react-hook-form";
-import './Dashboard.css'
+import '../Dashboard/Dashboard.css'
 
 
 const Dashboard = () => {
@@ -20,10 +20,7 @@ const Dashboard = () => {
     return (
         <div className="dash">
 
-            <br />
-            <br />
-            <br />
-            <br />
+           
            
             <form onSubmit={handleSubmit(onSubmit)}>
                         <h2>please add a new service</h2>
