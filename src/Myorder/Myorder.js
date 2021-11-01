@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import UseAuth from './../Context/UseAuth';
+import '../Myorder/Myorder.css'
 
 const Myorder = () => {
     const {user}=UseAuth();
@@ -40,12 +41,9 @@ const Myorder = () => {
       
     }
     return (
-        <div>
-            <br />
-            <br />
-            <br /><br />
-            <br />
-            <h4> my order</h4>
+        <div className="myord">
+           
+           
             <table className="table table-sm">
                 <thead>
                     <tr>

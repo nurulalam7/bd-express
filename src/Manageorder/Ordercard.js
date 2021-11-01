@@ -5,7 +5,7 @@ const Ordercard = ({ordered}) => {
    
     const {displayName,email,name,location,}=ordered;
     return (
-        <div>
+        <div className="man">
             <Col>
                     <Card>
                         {/* <Card.Img variant="top" src={img} /> */}

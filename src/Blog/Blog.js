@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import '../Blog/Blog.css'
 // import { useParams } from 'react-router';
 
 import UseAuth from './../Context/UseAuth';
@@ -49,13 +50,8 @@ const Blog = () => {
     }
 
     return (
-        <div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+        <div className="upda">
+           
             <table className="table table-sm">
                 <thead>
                     <tr>
