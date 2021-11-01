@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router';
 
 import UseAuth from './../Context/UseAuth';
+import { Link } from 'react-router-dom';
 
 const Blog = () => {
     // const {_id}=useParams();
@@ -12,29 +13,43 @@ const Blog = () => {
         .then(res=>res.json())
         .then(data=>setorders(data));
 
-    },[])
+    },[orders])
 
     // delete user 
     const handledeleteuser = id=>{
-        // alert(id)
-        const url=`http://localhost:5000/orders/${id}`;
-       fetch (url,{
-           method:'DELETE',
-       })
-            .then(res=>res.json())
-            .then(data=>{
-                if(data.deletedCount>0 ){
-                    alert('successfuly deleted')
-                    // const remainingorder=orders.filter(order=> order._id !==id)
-                    // setorders(remainingorder)
-
-                }
+        const proced=window.confirm('are you sure ,you want to delete');
+        if(proced){
+            const url=`http://localhost:5000/orders/${id}`;
+            fetch (url,{
+                method:'DELETE',
             })
+                 .then(res=>res.json())
+                 .then(data=>{
+                     if(data.deletedCount>0 ){
+                         alert('successfuly deleted')
+                         const remainingorder=orders.filter(order=> order._id !==id)
+                         setorders(remainingorder)
+     
+                     }
+                 })
+
+        }
+        // alert(id)
+       
       
            
       
          
 
+    }
+    const handleupdatedinfo= (id)=>{
+        fetch(`http://localhost:5000/orders/${id}`,{
+            method:'PUT',
+
+        })
+        .then(res=>res.json())
+        .then(data=>console.log(data))
+       
     }
 
     return (
@@ -66,13 +81,27 @@ const Blog = () => {
                                <tr>
                                   
                                    <th>{index+1}</th>
-                                   <th>{order.name}</th>
-                                   <th>{order.displayName}</th>
-                                   <th>{order.email}</th>
-                                   <th>{order.price}</th>
-                                   <th>{order.location}</th>
-                                   <button onClick={()=>handledeleteuser(order._id)}>button</button>
+                                   <td>{order.name}</td>
+                                   <td>{order.displayName}</td>
+                                   <td>{order.email}</td>
+                                   <td>{order.price}</td>
+                                   <td>{order.location}</td>
+                                 {/* <Link to ={`/orders/update/${order._id}`}><button>update</button></Link> */}
+
+                                 <td>
+                                   {
+                                       order.approved==false ?' pending' : 'approved'
+                                   }
+
+                                 </td>
+
+                                 <td>
+                                    <button onClick={()=>handleupdatedinfo(order._id)}>update</button>
+                                   <button className="btn btn-danger" onClick={()=>handledeleteuser(order._id)}>delete</button>
                                    
+
+                                 </td>
+                                
                                 </tr>
                                
                                 

@@ -16,8 +16,11 @@ const Service = () => {
 
     const onSubmit=data=>{
 
-       const saveddata=getstoredcart();
-       data.order=saveddata;
+        //  const saveddata=getstoredcart();
+        //    data.order=saveddata;
+        data.approved=false;
+        data.price=singleservice.price;
+
        fetch('http://localhost:5000/orders',{
            method:'POST',
            headers:{
@@ -33,6 +36,10 @@ const Service = () => {
            }
        })
    }
+
+
+
+
     // const [products,setproducts]=Serviceinfo();
     const {id}=useParams();
     const [singleservice,setsingleservice]=useState({});

@@ -18,26 +18,30 @@ const Header = () => {
                   <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                          <Link className="head" to="/home">Home</Link>
-                         {/* <Link className="head" to="/myorder">my order</Link>
-                         <Link className="head" to="/addservice">add service</Link> */}
-                         {/* <Link className="head" to="/service">service</Link> */}
-                        
+                         
                          <Link className="head" to="/dashboard">dash board</Link>
-                         <Link className="head" to="/login">log in</Link>
+                        
                          {/* <Link className="head" to="/manageorder">manage all orders</Link> */}
-                         <Link className="head" to="/blog">manage all order</Link>
+                         
                          
                          
                         
                          
                          
                          {
-                             user?.email &&  
+                             user?.email ?   
                             
-                             <li><button className="btn btn-warning mx-2" onClick={logout}>logout</button></li>
+                            <> 
+                                 <Link className="head" to="/blog">manage all order</Link>
+                                 <Link className="head" to="/myorder">my orders</Link>
+                                 <button className="btn btn-warning mx-2" onClick={logout}>logout</button>
+                                 <a className="mx-2 text-decoration-none" href="#login">{user.displayName}</a>
+
+                                
+                            </> :  <Link className="head" to="/login">log in</Link> 
                          }
                             
-                         <a className="mx-2 text-decoration-none" href="#login">{user.displayName}</a>
+                        
                         
                          {
                              user.email && <img className="userimage" src={user.photoURL} alt="" />
