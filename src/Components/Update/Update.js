@@ -13,14 +13,14 @@ const Update = () => {
     const[update,setupdate]=useState({});
     // const [up,setup]=useState({})
     useEffect(()=>{
-        const url=`http://localhost:5000/orders/${id}`;
+        const url=`https://evening-brook-25408.herokuapp.com/orders/${id}`;
         fetch(url)
         .then(res=>res.json())
         .then(data=>setupdate(data));
     },[])
 
     const handleupdateinfo=e=>{
-        const url=`http://localhost:5000/orders/${id}`;
+        const url=`https://evening-brook-25408.herokuapp.com/orders/${id}`;
         fetch(url,{
             method:'PUT',
            headers:{

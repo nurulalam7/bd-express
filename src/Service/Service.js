@@ -21,7 +21,7 @@ const Service = () => {
         data.approved=false;
         data.price=singleservice.price;
 
-       fetch('http://localhost:5000/orders',{
+       fetch('https://evening-brook-25408.herokuapp.com/orders',{
            method:'POST',
            headers:{
                'content-type': 'application/json'
@@ -44,7 +44,7 @@ const Service = () => {
     const {id}=useParams();
     const [singleservice,setsingleservice]=useState({});
     useEffect(()=>{
-        fetch(`http://localhost:5000/services/${id}`)
+        fetch(`https://evening-brook-25408.herokuapp.com/services/${id}`)
         .then(res=>res.json())
         .then(data=>setsingleservice(data));
     },[])

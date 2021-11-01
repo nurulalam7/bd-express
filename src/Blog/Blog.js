@@ -9,7 +9,7 @@ const Blog = () => {
     const {user}=UseAuth();
     const [orders,setorders]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/orders')
+        fetch('https://evening-brook-25408.herokuapp.com/orders')
         .then(res=>res.json())
         .then(data=>setorders(data));
 
@@ -19,7 +19,7 @@ const Blog = () => {
     const handledeleteuser = id=>{
         const proced=window.confirm('are you sure ,you want to delete');
         if(proced){
-            const url=`http://localhost:5000/orders/${id}`;
+            const url=`https://evening-brook-25408.herokuapp.com/${id}`;
             fetch (url,{
                 method:'DELETE',
             })
@@ -43,7 +43,7 @@ const Blog = () => {
 
     }
     const handleupdatedinfo= (id)=>{
-        fetch(`http://localhost:5000/orders/${id}`,{
+        fetch(`https://evening-brook-25408.herokuapp.com/orders/${id}`,{
             method:'PUT',
 
         })
