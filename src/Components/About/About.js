@@ -17,9 +17,9 @@ const About = () => {
   <Card>
     <Card.Img variant="top" src={my1} />
     <Card.Body>
-      <Card.Title>Card title</Card.Title>
+      <Card.Title>parves</Card.Title>
       <Card.Text>
-        This is founer of this industry . a wider card with supporting text below as a natural lead-in to
+        This is founder of this industry . a wider card with supporting text below as a natural lead-in to
         additional content. This content is a little bit longer.
       </Card.Text>
     </Card.Body>
@@ -28,7 +28,7 @@ const About = () => {
   <Card>
     <Card.Img variant="top" src={my2} />
     <Card.Body>
-      <Card.Title>Card title</Card.Title>
+      <Card.Title>jon mark</Card.Title>
       <Card.Text>
         he is co ceo of this coompany. This card has supporting text below as a natural lead-in to additional
         content.{' '}
@@ -39,7 +39,7 @@ const About = () => {
   <Card>
     <Card.Img variant="top" src={my3} />
     <Card.Body>
-      <Card.Title>Card title</Card.Title>
+      <Card.Title>elon dark</Card.Title>
       <Card.Text>
        he is ceo of this industry. below as a natural lead-in to
         additional content. This card has even longer content than the first to

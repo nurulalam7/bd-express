@@ -4,6 +4,7 @@ import { useParams } from 'react-router'
 import { useForm } from 'react-hook-form';
 import UseAuth from './../Context/UseAuth';
 import { getstoredcart } from '../Realdb/Realdb';
+import '../Service/Service.css'
 
 
 
@@ -55,10 +56,8 @@ const Service = () => {
    
 
     return (
-        <div className='mt-5'>
-            <br />
-            <br />
-            <br />
+        <div className='ser'>
+            
            <div className="container">
                <div className="row">
                    <div className="col md-6">
