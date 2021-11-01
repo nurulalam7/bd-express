@@ -1,0 +1,19 @@
+.visioninfo{
+    background-color: palegoldenrod;
+   
+}
+.visioninfo h2{
+    text-align: center;
+    color: navy;
+   
+    font-weight: 40px;
+    
+}
+.visioninfo i{
+    color: orange;
+}
+.visioninfo img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}

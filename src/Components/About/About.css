@@ -1,0 +1,15 @@
+.aboutinfo{
+    margin-top: 90px;
+}
+.aboutinfo h2{
+    text-align: center;
+    color: salmon;
+    margin-bottom: 30px;
+}
+.aboutinfo img{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    
+
+}

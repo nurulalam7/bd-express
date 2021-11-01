@@ -28,6 +28,7 @@ import Dashboard from './Home/Dashboard/Dashboard';
 import About from './Components/About/About';
 import Homeinformation from './Components/Homeinformation/Homeinformation';
 import Myorder from './Myorder/Myorder';
+import Notfound from './Components/Notfound/Notfound';
 
 
 
@@ -71,9 +72,9 @@ function App() {
                 </Route> */}
                 
                 
-                <Route path='/dashboard'>
+                <PrivateRoute path='/dashboard'>
                   <Dashboard></Dashboard>
-                </Route>
+                </PrivateRoute>
                 <Route path='/orders/update/:id'>
                   <Update></Update>
                 </Route>
@@ -83,6 +84,9 @@ function App() {
                 
                 <Route path='/myorder'>
                  <Myorder></Myorder>
+                </Route>
+                <Route path=''>
+                 <Notfound></Notfound>
                 </Route>
                 
 

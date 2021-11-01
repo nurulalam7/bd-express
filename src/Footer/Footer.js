@@ -1,10 +1,11 @@
 import React from 'react'
+import '../Footer/Footer.css'
 
 
 
 const Footer = () => {
     return (
-        <div>
+        <div className="foo">
            <div className="foott">
                <div className="container">
                    <div className="row">
@@ -14,12 +15,11 @@ const Footer = () => {
                            <h6>gulshan ,dhaka</h6>
                            <p>01853037540</p>
                        </div>
-                       <div className="col md-4">
+                       <div className="fooicon col md-4">
                            <h2>please connet with us</h2>
-                           <i class="fab fa-facebook-square"></i>
-                            <h3>twiter</h3>
-                            <h3>whatsapp</h3>
-
+                           <i class="fab fa-facebook-square fa-3x"></i>
+                           <i class="fab fa-twitter-square fa-3x"></i>
+                           <i class="fab fa-instagram-square fa-3x"></i>
 
                        </div>
                        <div className="col md-4">

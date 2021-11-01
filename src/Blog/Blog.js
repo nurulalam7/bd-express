@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router';
+// import { useParams } from 'react-router';
 
 import UseAuth from './../Context/UseAuth';
 import { Link } from 'react-router-dom';
@@ -96,7 +96,7 @@ const Blog = () => {
                                  </td>
 
                                  <td>
-                                    <button onClick={()=>handleupdatedinfo(order._id)}>update</button>
+                                    <button className="btn btn-warning" onClick={()=>handleupdatedinfo(order._id)}>update</button>
                                    <button className="btn btn-danger" onClick={()=>handledeleteuser(order._id)}>delete</button>
                                    
 

@@ -5,6 +5,7 @@ import React, { } from 'react'
 
 import './Login.css'
 import UseAuth from './../Context/UseAuth';
+import '../Login/Login.css'
 
 
 
@@ -17,11 +18,7 @@ const Login = () => {
     return (
         
            <div className="log">
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+           
             <h2>please login</h2>
             <button className="btn btn-success" onClick={signinusinggoogle}>Google sign in</button> :  
             

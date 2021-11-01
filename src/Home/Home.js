@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Row } from 'react-bootstrap';
+import '../Home/Home.css'
 
 
 
@@ -14,11 +15,8 @@ const Home = () => {
        .then(data=>setservice(data));
     },[])
     return (
-        <div>
-            <br />
-            <br />
-            <br />
-            <br />
+        <div class="homeinfo">
+            
            <h3 className="headername">our service </h3>
            <div className="container">
                 <Row xs={1} md={2} className="g-4">
