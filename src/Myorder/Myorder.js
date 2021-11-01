@@ -13,6 +13,32 @@ const Myorder = () => {
         .then(res=>res.json())
         .then(data=>setmyorders(data))
     },[user.email])
+
+
+    // delete my order 
+
+    const handledeleteuser = id=>{
+        const proced=window.confirm('are you sure ,you want to delete');
+        if(proced){
+            const url=`https://evening-brook-25408.herokuapp.com/orders/${id}`;
+            fetch (url,{
+                method:'DELETE',
+            })
+                 .then(res=>res.json())
+                 .then(data=>{
+                     if(data.deletedCount>0 ){
+                         alert('successfuly deleted')
+                         const remainingorder=myorders.filter(order=> order._id !==id)
+                         setmyorders(remainingorder)
+     
+                     }
+                 })
+
+        }
+        // alert(id)
+       
+      
+    }
     return (
         <div>
             <br />
@@ -57,7 +83,7 @@ const Myorder = () => {
 
                                  <td>
                                     
-                                   <button className="btn btn-success">delete</button>
+                                   <button onClick={()=>handledeleteuser(myorder._id)} className="btn btn-success">delete</button>
                                    
 
                                  </td>

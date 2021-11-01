@@ -19,7 +19,7 @@ const Blog = () => {
     const handledeleteuser = id=>{
         const proced=window.confirm('are you sure ,you want to delete');
         if(proced){
-            const url=`https://evening-brook-25408.herokuapp.com/${id}`;
+            const url=`https://evening-brook-25408.herokuapp.com/orders/${id}`;
             fetch (url,{
                 method:'DELETE',
             })
@@ -37,10 +37,6 @@ const Blog = () => {
         // alert(id)
        
       
-           
-      
-         
-
     }
     const handleupdatedinfo= (id)=>{
         fetch(`https://evening-brook-25408.herokuapp.com/orders/${id}`,{
